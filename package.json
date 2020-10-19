@@ -6,7 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "unit": "jest --env=jsdom",
+    "test": "yarn unit --collectCoverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
@@ -31,6 +32,19 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/src/**/*.ts(x)",
+      "*.ts(x)"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -38,6 +52,13 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.*",
+      "**/tests/*.tsx"
+    ],
+    "reporters": [
+      "default"
     ]
   }
 }
