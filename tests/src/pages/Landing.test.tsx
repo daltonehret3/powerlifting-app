@@ -1,5 +1,4 @@
 import {render, RenderAPI, within} from '@testing-library/react-native';
-
 import React from 'react';
 
 import {Landing} from "../../../src/pages/Landing";

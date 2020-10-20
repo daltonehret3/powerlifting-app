@@ -2,8 +2,6 @@ module.exports = {
   preset: 'react-native',
   collectCoverageFrom: [
     '**/src/**/*.ts',
-    '**/*.ts',
-    '**/*.tsx',
     '**/src/**/*.tsx',
   ],
   coverageThreshold: {
@@ -29,4 +27,5 @@ module.exports = {
     "node"
   ],
   testPathIgnorePatterns: ['node_modules'],
+  setupFiles: [ "./node_modules/react-native-gesture-handler/jestSetup.js" ]
 };
