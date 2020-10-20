@@ -1,14 +1,16 @@
-import React, {FC} from 'react';
 import {Button, SafeAreaView} from 'react-native';
-import { Color } from '../enums/Color';
+import React, {FC} from 'react';
+
+import {Color} from '../enums/Color';
 
 export const Landing: FC = () => {
     return (
         <SafeAreaView>
             <Button
-                onPress={() => null}
+                onPress={(): null => null}
                 title={'Login'}
                 color={Color.red}
+                testID={'loginButton'}
             />
         </SafeAreaView>
     );
