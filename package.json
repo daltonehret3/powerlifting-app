@@ -1,13 +1,14 @@
 {
-  "name": "PowerliftingApp",
+  "name": "powerlifting-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "unit": "jest --env=jsdom",
+    "test": "yarn lint && yarn coverage",
     "pods": "cd ios/ && pod install && cd ../",
-    "unit": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
