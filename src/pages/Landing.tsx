@@ -1,4 +1,4 @@
-import {Button, SafeAreaView} from 'react-native';
+import {SafeAreaView, Button} from 'react-native';
 import React, {FC} from 'react';
 
 import {Color} from '../enums/Color';

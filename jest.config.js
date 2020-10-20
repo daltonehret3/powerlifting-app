@@ -14,11 +14,11 @@ module.exports = {
   },
   collectCoverage: true,
   coverageReporters: ['lcov', 'text', 'cobertura', 'html', 'json'],
-  reporters: ['default'],
   testMatch: [
-      '**/tests/**/*.ts?(x)'
+      '**/tests/**/*.ts',
+      '**/tests/**/*.tsx'
   ],
-  "moduleFileExtensions": [
+  moduleFileExtensions: [
     "ts",
     "tsx",
     "js",
