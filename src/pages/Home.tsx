@@ -1,10 +1,8 @@
-import React, { FC } from "react";
-import {Text, SafeAreaView } from "react-native";
+import React, {FC} from "react";
+import {Text, SafeAreaView} from "react-native";
 
-export const Home: FC = () => {
-    return (
-        <SafeAreaView>
-            <Text>{'You Made it'}</Text>
-        </SafeAreaView>
-    )
-};
+export const Home: FC = () => (
+    <SafeAreaView>
+        <Text>{'You Made it'}</Text>
+    </SafeAreaView>
+);

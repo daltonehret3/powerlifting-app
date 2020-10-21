@@ -1,12 +1,26 @@
 import React from 'react';
-import {render, RenderAPI, within, fireEvent} from '@testing-library/react-native';
+import {
+    render,
+    RenderAPI,
+    within,
+    fireEvent
+} from '@testing-library/react-native';
+import {ReactTestInstance} from 'react-test-renderer';
 
 import {Landing} from "../../../src/pages/Landing";
+import {useAppNavigation} from "../../../navigation";
+
+jest.mock('../../../navigation');
 
 describe('Landing', () => {
-    let testRenderResult: RenderAPI;
+    let testRenderResult: RenderAPI,
+        expectedNavigation: {navigate: any};
 
     beforeEach(() => {
+        expectedNavigation = {navigate: jest.fn()};
+
+        // @ts-ignore
+        useAppNavigation.mockReturnValue(expectedNavigation)
         testRenderResult = render(<Landing />);
     });
 
@@ -19,11 +33,18 @@ describe('Landing', () => {
         expect(button)
     });
 
-    it('should do nothing when the login button is pressed', () => {
-        const button = testRenderResult.getByTestId('loginButton');
+    describe('fireEvent', () => {
+        let button: ReactTestInstance;
 
-        fireEvent.press(button);
+        beforeEach(() => {
+            button = testRenderResult.getByTestId('loginButton');
+        });
 
-        expect(button).toBeDefined();
+        it('should call navigation when the button is pressed', () => {
+            fireEvent.press(button);
+
+            expect(expectedNavigation.navigate).toHaveBeenCalledTimes(1);
+            expect(expectedNavigation.navigate).toHaveBeenCalledWith('Home');
+        });
     });
 });

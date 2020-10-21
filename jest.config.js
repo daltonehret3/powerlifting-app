@@ -5,6 +5,7 @@ module.exports = {
     '**/src/**/*.tsx',
     '!**/src/constants/Dimensions.ts',
     '!**/src/enums/*',
+    '!**/navigation/*',
   ],
   coverageThreshold: {
     global: {

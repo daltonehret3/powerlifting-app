@@ -5,13 +5,11 @@ import {Home} from "../pages/Home";
 
 const Tab = createBottomTabNavigator();
 
-export const Tabs = () => {
-    return (
-        <Tab.Navigator>
-            <Tab.Screen
-                name={'Home'}
-                component={Home}
-            />
-        </Tab.Navigator>
-    )
-}
+export const Tabs = () => (
+    <Tab.Navigator>
+        <Tab.Screen
+            name={'Home'}
+            component={Home}
+        />
+    </Tab.Navigator>
+)
