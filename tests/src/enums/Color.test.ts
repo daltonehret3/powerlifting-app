@@ -1,4 +1,4 @@
-import { Color } from "../../../src/enums/Color";
+import {Color} from "../../../src/enums/Color";
 
 describe('Colors', () => {
     it('should return the proper colors', () => {

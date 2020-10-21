@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: "700"
     }
-})
+});
 
 export interface IButtonProps {
     onPress: () => void;
@@ -23,7 +23,12 @@ export interface IButtonProps {
 }
 
 export const Button: FC<IButtonProps> = (props) => {
-    const {onPress, buttonText, buttonStyles, testID} = props;
+    const {
+        onPress,
+        buttonText,
+        buttonStyles,
+        testID
+    } = props;
 
     return (
         <TouchableOpacity
