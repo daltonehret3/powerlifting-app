@@ -5,19 +5,26 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Landing} from './src/pages/Landing';
+import {Home as HomeScreen} from "./src/pages/Home";
+import { Tabs } from './src/navigation/tabStack';
 
-const Stack = createStackNavigator();
+const RootStack = createStackNavigator();
 
 export const App = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen
+            <RootStack.Navigator>
+                <RootStack.Screen
                     name={'Landing'}
                     component={Landing}
                     options={{headerShown: false}}
                 />
-            </Stack.Navigator>
+                <RootStack.Screen
+                    name={'Home'}
+                    component={Tabs}
+                    options={{headerShown: false}}
+                />
+            </RootStack.Navigator>
         </NavigationContainer>
     );
 };
