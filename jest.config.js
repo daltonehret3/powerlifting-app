@@ -3,6 +3,8 @@ module.exports = {
   collectCoverageFrom: [
     '**/src/**/*.ts',
     '**/src/**/*.tsx',
+    '!**/src/constants/Dimensions.ts',
+    '!**/src/enums/*',
   ],
   coverageThreshold: {
     global: {
