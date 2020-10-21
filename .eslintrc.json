@@ -23,11 +23,17 @@
         "beforeSelfClosing": "always"
       }],
     "@typescript-eslint/no-explicit-any": "warn",
+    "react/jsx-max-props-per-line": [1, {"when":  "always"}],
+    "max-len": ["error",
+      {
+        "code": 120
+      }],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/interface-name-prefix" : ["error", {"prefixWithI" : "always"}],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -92,10 +98,22 @@
           "error"
         ]
       }
-    }],
+    },
+    {
+      "files": [
+        "**/tests/**",
+        "**/tests/**"
+      ],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-ts-ignore": "off"
+      }
+    }
+  ],
   "env": {
     "browser": true,
     "jest": true,
     "es6": true
-  }
+  },
+  "reportUnusedDisableDirectives": true
 }
