@@ -13,9 +13,6 @@ jobs:
       - name: Install npm dependencies
         run: |
           yarn install
-      - name: Run lint
-        run: |
-          yarn lint
       - name: Run tests
         run: |
           yarn test
