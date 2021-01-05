@@ -1,7 +1,7 @@
-name: Build Android and iOS
+name: Pull Request
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
