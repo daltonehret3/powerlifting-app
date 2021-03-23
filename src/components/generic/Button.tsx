@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 export interface IButtonProps {
     onPress: () => void;
     buttonText: string;
-    buttonStyles: {};
+    buttonStyles: Record<string, unknown>;
     testID: string;
 }
 
