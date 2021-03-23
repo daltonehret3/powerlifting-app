@@ -23,6 +23,7 @@ describe('Button', () => {
 
     it('should render the button', () => {
         const button = testRenderResult.getByTestId(expectedProps.testID);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         const buttonText = button.children[0].props.children
 
