@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "unit": "jest --env=jsdom",
-    "test": "yarn lint && yarn coverage",
+    "test": "npm run lint && yarn coverage",
     "pods": "cd ios/ && pod install && cd ../",
     "coverage": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
