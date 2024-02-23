@@ -37,7 +37,7 @@
     "@types/react-test-renderer": "18.0.0",
     "babel-jest": "27.5.1",
     "chance": "1.1.8",
-    "eslint": "8.16.0",
+    "eslint": "8.57.0",
     "eslint-plugin-import": "2.26.0",
     "jest": "27.5.1",
     "metro-react-native-babel-preset": "0.71.0",
